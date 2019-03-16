@@ -1,0 +1,10 @@
+{
+  "lambda": {
+    "role": "ex-cl-ts-test3-executor",
+    "name": "ex-cl-ts-test3",
+    "region": "us-west-1"
+  },
+  "api": {
+    "id": "rtlgmemhl5"
+  }
+}

@@ -2,21 +2,25 @@
   "name": "ex-cl-ts-test3",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "prestart": "npm run build",
-    "start": "node ."
+    "start": "node .",
+    "create:lambda": "claudia generate-serverless-express-proxy --express-module dist/app",
+    "build:api": "claudia create  --profile sandbox --handler lambda.handler --deploy-proxy-api --region us-west-1",
+    "update": "claudia update"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "@types/express": "^4.16.1",
     "@types/node": "^11.11.3",
     "ajv": "^6.9.1",
+    "aws-serverless-express": "^3.3.5",
     "express": "^4.16.4",
     "fs": "0.0.1-security",
     "method-override": "^3.0.0",
