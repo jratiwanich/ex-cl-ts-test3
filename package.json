@@ -9,9 +9,9 @@
     "build": "tsc",
     "prestart": "npm run build",
     "start": "node .",
-    "create:lambda": "claudia generate-serverless-express-proxy --express-module dist/app",
-    "build:api": "claudia create  --profile sandbox --handler lambda.handler --deploy-proxy-api --region us-west-1",
-    "update": "claudia update"
+    "build:lambda": "claudia generate-serverless-express-proxy --express-module dist/app",
+    "deploy:lambda": "claudia create  --profile sandbox --handler lambda.handler --deploy-proxy-api --region us-west-1",
+    "update:lambda": "claudia update"
   },
   "keywords": [],
   "author": "",
